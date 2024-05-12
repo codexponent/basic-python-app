@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up JDK
       uses: actions/setup-java@v1
@@ -22,7 +22,7 @@ jobs:
         java-version: '11'  # Set your Java version here
 
     - name: SonarQube Scan
-      uses: SonarSource/sonarcloud-github-action@master
+      uses: sonarsource/sonarqube-scan-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: "9cf52ab75157509abad1bec9d25a974217e126de"  # Set your SonarQube token as a secret in your repository
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        # SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
