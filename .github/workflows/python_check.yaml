@@ -19,7 +19,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: '11'  # Set your Java version here
+        java-version: '17'  # Set your Java version here
 
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
