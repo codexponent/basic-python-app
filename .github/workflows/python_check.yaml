@@ -1,12 +1,14 @@
 name: SonarQube Analysis
 
 on:
-  push:
-    branches:
-      - main  # Set your main branch here
-  pull_request:
-    branches:
-      - main  # Set your main branch here
+  workflow_dispatch:
+    
+  # push:
+  #   branches:
+  #     - main  # Set your main branch here
+  # pull_request:
+  #   branches:
+  #     - main  # Set your main branch here
 
 jobs:
   sonarqube-analysis:
