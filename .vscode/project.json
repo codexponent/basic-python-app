@@ -1,7 +1,0 @@
-{
-    "project": "firstproject",
-    "sonarURL": "https://sonarqube.sulabhshrestha.com/",
-    "auth": {
-      "token": "squ_48d8f31df4aacfc7f5b36abf9e8819f7023e7d83"
-    }
-  }
