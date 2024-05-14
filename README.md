@@ -10,3 +10,13 @@ Basic Python App
 and <a>How to install and configure SonarQube on AWS EC2 Ubuntu 22.04 and 20.04 (Full Setup)? | by DeshDeepakDhobi (DD) | Medium` as a reference to install the sonarqube on linux</a>
 - Used `sonar-project.properties` to add the projectkey which is created locally on the sonarqube UI
 - Add the URL and the token on the github secret
+
+# Installing Ansible
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+
+# # Command to run Ansible
+ansible-playbook -i 18.209.22.213, deploy_flask.yml
+

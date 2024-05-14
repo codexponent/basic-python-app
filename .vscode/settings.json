@@ -2,5 +2,6 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "Lint1",
         "projectKey": "firstproject"
-    }
+    },
+    "ansible.python.interpreterPath": "c:\\Python310\\python.exe"
 }

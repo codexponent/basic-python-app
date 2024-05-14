@@ -1,0 +1,35 @@
+---
+- name: Install Flask and run Python application
+  hosts: all
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Update Server
+      raw: sudo apt update
+
+    - name: Install Python pip
+      raw: sudo apt install -y python3-pip
+
+    - name: Install flask
+      raw: sudo apt install -y python3-flask
+        #    - name: Install Flask
+        #      pip:
+        #        name: flask
+        #        executable: pip3
+        #
+    - name: Copy Python application file
+      copy:
+        src: /home/ubuntu/app.py
+        dest: /home/ubuntu/app.py
+          #remote_src: yes
+
+    - name: Run Python application
+      command: python3 /home/ubuntu/app.py
+      async: 600
+      poll: 0
+
+  vars:
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no -i ansible.pem'
+    ansible_user: ubuntu
+
